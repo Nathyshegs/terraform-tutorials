@@ -9,7 +9,9 @@ terraform {
 }
 
 module "vpc" {
-  source = "../../../infrastructure-modules/vpc"
+  source = "git::https://github.com/Nathyshegs/terraform-tutorials.git//infrastructure-modules/vpc"
+  # source = "../../../infrastructure-modules/vpc"
+  
 
   env = "dev"
   azs = ["us-east-1a", "us-east-1b"]
